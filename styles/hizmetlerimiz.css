@@ -1,0 +1,17 @@
+#hizmetlerimiz {
+	height: 50rem;
+	background: #ff47c8;
+}
+
+#hizmetlerimiz .section-header {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem;
+}
+
+#hizmetlerimiz .section-header .icon {
+	width: 4rem;
+	height: 4rem;
+	fill: red;
+}

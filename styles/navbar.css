@@ -1,0 +1,106 @@
+#navbar {
+	position: sticky;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+	gap: 0rem;
+	font-size: 1.2rem;
+	align-items: center;
+	color: white;
+	padding: 0 1rem;
+
+	transition: 0.3s ease-in-out;
+	background: linear-gradient(#000, #ffffff00);
+}
+
+#navbar.scrolled {
+
+	background: #272727;
+}
+
+#navbar a{
+	text-decoration: none;
+	color: white;
+}
+
+#navbar .logo {
+	height: 6rem;
+}
+
+#navbar .icon {
+width: 3rem;
+height: 3rem;
+fill: white;
+}
+
+#navbar #sidebar-active {
+	display: none;
+}
+
+#navbar .links-container {
+	background: #969696;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}
+
+#navbar .menu-button {
+	padding: 1rem;
+	margin: 0.5rem;
+}
+
+#navbar .open-sidebar-button,
+#navbar .close-sidebar-button,
+#navbar #overlay {
+	display: none;
+}
+
+@media (max-width: 700px) {
+	#navbar .links-container {
+		flex-direction: column;
+		align-items: flex-start;
+
+		position: fixed;
+		top: 0;
+		right: -100%;
+		z-index: 10;
+		width: 12rem;
+		height: 100%;
+
+		background-color: #959595;
+		box-shadow: -5px 0 10px rgba(0, 0, 0, 0.10);
+		transition: 0.4s ease-in-out;
+	}
+
+	#navbar .links-container label,
+	#navbar .links-container a {
+		width: 100%;
+	}
+
+	#navbar .open-sidebar-button {
+		justify-self: flex-end;
+		background: #8d8e9f;
+
+	}
+
+	#navbar .open-sidebar-button,
+	#navbar .close-sidebar-button {
+		display: flex;
+		align-items: center;
+	}
+
+	#sidebar-active:checked~.links-container {
+		right: 0;
+	}
+
+	#sidebar-active:checked~#overlay {
+	display: block;
+		height: 100%;
+		width: 100%;
+		position: fixed;
+		z-index: 9;
+		top: 0;
+		left: 0;
+
+	}
+}

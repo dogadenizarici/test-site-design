@@ -1,0 +1,17 @@
+#hakkimizda {
+	height: 50rem;
+	background: yellow;
+}
+
+#hakkimizda .section-header {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem;
+}
+
+#hakkimizda .section-header .icon {
+	width: 4rem;
+	height: 4rem;
+	fill: red;
+}

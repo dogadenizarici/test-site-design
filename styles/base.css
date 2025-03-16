@@ -1,0 +1,25 @@
+:root {
+	--highlight-color: #41bdd3;
+
+	--font-weight: 500;
+}
+
+::selection {
+	background: var(--highlight-color);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 12pt;
+
+	font-family: "Roboto", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: var(--font-weight);
+	font-style: normal;
+	font-variation-settings: "wdth" 100;
+}
