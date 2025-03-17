@@ -1,9 +1,9 @@
 #navbar {
+	z-index: 10;
 	position: sticky;
 	top: 0;
 	display: flex;
 	justify-content: space-between;
-	gap: 0rem;
 	font-size: 1.2rem;
 	align-items: center;
 	color: white;
@@ -14,11 +14,10 @@
 }
 
 #navbar.scrolled {
-
 	background: #272727;
 }
 
-#navbar a{
+#navbar a {
 	text-decoration: none;
 	color: white;
 }
@@ -28,9 +27,9 @@
 }
 
 #navbar .icon {
-width: 3rem;
-height: 3rem;
-fill: white;
+	width: 3rem;
+	height: 3rem;
+	fill: white;
 }
 
 #navbar #sidebar-active {
@@ -38,15 +37,24 @@ fill: white;
 }
 
 #navbar .links-container {
-	background: #969696;
 	display: flex;
+	gap: 1rem;
 	align-items: center;
 	flex-direction: row;
 }
 
 #navbar .menu-button {
-	padding: 1rem;
-	margin: 0.5rem;
+display: flex;
+align-items: center;
+	padding: 0.75rem;
+	background: #a30000;
+	border-radius: 0.5rem;
+	height: 4rem;
+}
+
+#navbar .menu-button:hover {
+	background: #ff0000;
+	transition: 0.2s ease-in-out;
 }
 
 #navbar .open-sidebar-button,
@@ -58,18 +66,20 @@ fill: white;
 @media (max-width: 700px) {
 	#navbar .links-container {
 		flex-direction: column;
-		align-items: flex-start;
 
 		position: fixed;
 		top: 0;
 		right: -100%;
-		z-index: 10;
+		z-index: 11;
 		width: 12rem;
 		height: 100%;
 
-		background-color: #959595;
-		box-shadow: -5px 0 10px rgba(0, 0, 0, 0.10);
+		background-color: #3f3f3f;
+		box-shadow: -5px 0 14px rgba(0, 0, 0, 0.25);
 		transition: 0.4s ease-in-out;
+
+		padding: 0.5rem;
+		gap: 0.5rem;
 	}
 
 	#navbar .links-container label,
@@ -79,8 +89,6 @@ fill: white;
 
 	#navbar .open-sidebar-button {
 		justify-self: flex-end;
-		background: #8d8e9f;
-
 	}
 
 	#navbar .open-sidebar-button,
@@ -94,13 +102,12 @@ fill: white;
 	}
 
 	#sidebar-active:checked~#overlay {
-	display: block;
+		display: block;
 		height: 100%;
 		width: 100%;
 		position: fixed;
-		z-index: 9;
+		z-index: -1;
 		top: 0;
 		left: 0;
-
 	}
 }

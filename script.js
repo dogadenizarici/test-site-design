@@ -32,7 +32,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 		const offset = navbar.getBoundingClientRect().height;
 
 		// Calculate the position to scroll to (target position minus the offset)
-		const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+		const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset + 1;
 
 		// Smoothly scroll to the calculated position
 		window.scrollTo({
@@ -71,3 +71,10 @@ function changeNavbarBackground() {
 		navbar.classList.remove("scrolled");
 	}
 }
+
+
+
+/*
+ * Header slider
+ */
+

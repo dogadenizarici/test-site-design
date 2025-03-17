@@ -1,5 +1,48 @@
-header {
-	height: 80vh;
-	background: tomato;
+header .slider-container {
+	position: relative;
+	width: 100%;
+	height: 70vh;
 }
 
+header .slide {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header #slide1 {
+	background-image: url("../images/mekik-sim.jpg");
+}
+
+header #slide2 {
+	background-image: url("../images/koltuk2.jpeg");
+}
+
+header .slide-content {
+
+}
+
+header .progress-bar {
+
+}
+
+header .indicators {
+
+}
+
+header .indicator {
+
+}
+
+header .indicator.active {
+
+}
+
+header .indicator:hover {
+
+}
