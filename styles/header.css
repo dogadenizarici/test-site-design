@@ -1,48 +1,97 @@
+header #slider {
+	position: relative;
+}
+
 header .slider-container {
 	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
 	width: 100%;
-	height: 70vh;
+	height: 100vh;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+
+		scrollbar-width: none;
+}
+
+header .slider-container::webkit-scrollbar {
+	display: none;
 }
 
 header .slide {
+	width: 100vw;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+
+	flex: 0 0 auto;
+	scroll-snap-align: center;
+}
+
+header .slide::before {
+	content: '';
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-size: cover;
-	background-position: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	background: linear-gradient(50deg, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.1) 60%);
+	z-index: 1;
 }
 
-header #slide1 {
+header #slide-one {
 	background-image: url("../images/mekik-sim.jpg");
 }
 
-header #slide2 {
+header #slide-two {
 	background-image: url("../images/koltuk2.jpeg");
 }
 
 header .slide-content {
-
+	position: absolute;
+	left: 2rem;
+	bottom: 4rem;
+	color: white;
+	z-index: 1;
 }
 
 header .progress-bar {
+	position: absolute;
+	bottom: 0;
+	height: 0.3rem;
+	width: 100%;
+	z-index: 1;
+}
 
+header .progress {
+	height: 100%;
+	width: 25%;
+	background: red;
 }
 
 header .indicators {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	z-index: 1;
+	display: flex;
+	gap: 0.5rem;
 
 }
 
 header .indicator {
-
-}
-
-header .indicator.active {
+	border: none;
+	background: #980000;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 1rem;
+	font-weight: 800;
+	color: white;
+	font-size: 1.1rem;
 
 }
 
 header .indicator:hover {
 
+	background: red;
 }
