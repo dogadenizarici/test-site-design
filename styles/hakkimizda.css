@@ -1,6 +1,6 @@
 #hakkimizda {
-	height: 50rem;
-	background: yellow;
+
+	background: #ffffff;
 }
 
 #hakkimizda .section-header {
@@ -15,3 +15,131 @@
 	height: 4rem;
 	fill: red;
 }
+
+#hakkimizda #collapsible {
+	background: #eee;
+	color: #444;
+	cursor: pointer;
+	padding: 1rem;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 1rem;
+}
+
+#hakkimizda .active, #collapsible:hover {
+	background-color: #ccc;
+}
+
+#hakkimizda .collapsible-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-in-out;
+}
+
+#hakkimizda .fancy-info-one {
+	background: red;
+	color: white;
+	display: grid;
+	grid-template-columns: 60% auto;
+}
+
+#hakkimizda .fancy-info-one p {
+	padding: 1rem;
+
+}
+
+#hakkimizda .fancy-info-one p::first-letter {
+	padding-left: 1rem;
+}
+
+#hakkimizda .fancy-info-one .image {
+	flex: none;
+	background-image: url("../images/mekik-sim.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+#hakkimizda .fancy-info-one .image::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	background: linear-gradient(90deg, rgba(255,0,0,1) 10%, rgba(255,255,255,0) 50%);
+}
+
+
+#hakkimizda .simple-info {
+	background: #e5e5e5;
+
+}
+
+#hakkimizda .simple-info p {
+	padding: 1rem;
+}
+
+#hakkimizda .simple-info p::first-letter {
+	padding-left: 1rem;
+}
+
+#hakkimizda .fancy-info-two {
+	background: red;
+	color: white;
+	display: grid;
+	grid-template-columns: auto 60%;
+}
+
+#hakkimizda .fancy-info-two p {
+	padding: 1rem;
+
+}
+
+#hakkimizda .fancy-info-two p::first-letter {
+	padding-left: 1rem;
+}
+
+#hakkimizda .fancy-info-two .image {
+	flex: none;
+	background-image: url("../images/mekik-sim.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+#hakkimizda .fancy-info-two .image::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	background: linear-gradient(90deg, rgba(0,0,0,0) 50%, rgba(255,0,0,1) 80%);
+}
+
+#hakkimizda #serviced-ones {
+	display: flex;
+	gap: 1rem;
+	padding: 1rem;
+	background: #c1c1c1;
+	justify-content: space-evenly;
+}
+
+#hakkimizda #serviced-ones {
+	height: 8rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+

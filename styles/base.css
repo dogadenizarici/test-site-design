@@ -15,7 +15,7 @@
 }
 
 html {
-	background: #191919;
+	background: #e3e3e3;
 	font-size: 12pt;
 
 	font-family: "Roboto", sans-serif;
@@ -23,4 +23,10 @@ html {
 	font-weight: var(--font-weight);
 	font-style: normal;
 	font-variation-settings: "wdth" 100;
+
+}
+
+#hakkimizda, #hizmetlerimiz, #iletisim, .nav-layout {
+	max-width: 1300px;
+	margin: 0 auto;
 }

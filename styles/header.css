@@ -11,7 +11,7 @@ header .slider-container {
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
 
-		scrollbar-width: none;
+	scrollbar-width: none;
 }
 
 header .slider-container::webkit-scrollbar {
@@ -19,7 +19,7 @@ header .slider-container::webkit-scrollbar {
 }
 
 header .slide {
-	width: 100vw;
+	width: 100%;
 	height: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -28,6 +28,7 @@ header .slide {
 
 	flex: 0 0 auto;
 	scroll-snap-align: center;
+	cursor: grab;
 }
 
 header .slide::before {
@@ -53,20 +54,7 @@ header .slide-content {
 	bottom: 4rem;
 	color: white;
 	z-index: 1;
-}
-
-header .progress-bar {
-	position: absolute;
-	bottom: 0;
-	height: 0.3rem;
-	width: 100%;
-	z-index: 1;
-}
-
-header .progress {
-	height: 100%;
-	width: 25%;
-	background: red;
+	cursor: default;
 }
 
 header .indicators {
@@ -76,6 +64,7 @@ header .indicators {
 	z-index: 1;
 	display: flex;
 	gap: 0.5rem;
+
 
 }
 
@@ -88,10 +77,34 @@ header .indicator {
 	font-weight: 800;
 	color: white;
 	font-size: 1.1rem;
-
+	cursor: pointer;
 }
 
 header .indicator:hover {
 
 	background: red;
+}
+
+@media (max-width: 1200px) {
+	header .slider-container {
+
+		height: 80vh;
+
+	}
+}
+
+@media (max-width: 800px) {
+	header .slider-container {
+
+		height: 50vh;
+
+	}
+}
+
+@media (max-width: 500px) {
+	header .slider-container {
+
+		height: 30vh;
+
+	}
 }
