@@ -273,3 +273,28 @@ coll.addEventListener("click", function() {
 	}
 });
 
+/*
+ * Infinite scroller part
+ */
+const scrollers = document.querySelectorAll(".scroller");
+
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+	addAnimation();
+}
+
+function addAnimation() {
+	scrollers.forEach(scroller => {
+		scroller.setAttribute("data-animated", true);
+
+		const scrollerInner = scroller.querySelector(".inner-scroller");
+		const scrollerContent = Array.from(scrollerInner.children);
+
+		for (let i = 0; i < 2; i++) {
+			scrollerContent.forEach(item => {
+				const duplicatedItem = item.cloneNode(true);
+				duplicatedItem.setAttribute("area-hidden", true);
+				scrollerInner.appendChild(duplicatedItem);
+			})
+		}
+	});
+}

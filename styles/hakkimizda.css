@@ -28,7 +28,8 @@
 	font-size: 1rem;
 }
 
-#hakkimizda .active, #collapsible:hover {
+#hakkimizda .active,
+#collapsible:hover {
 	background-color: #ccc;
 }
 
@@ -69,7 +70,7 @@
 	width: 100%;
 	height: 100%;
 
-	background: linear-gradient(90deg, rgba(255,0,0,1) 10%, rgba(255,255,255,0) 50%);
+	background: linear-gradient(90deg, rgba(255, 0, 0, 1) 10%, rgba(255, 255, 255, 0) 50%);
 }
 
 
@@ -117,29 +118,40 @@
 	width: 100%;
 	height: 100%;
 
-	background: linear-gradient(90deg, rgba(0,0,0,0) 50%, rgba(255,0,0,1) 80%);
+	background: linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(255, 0, 0, 1) 80%);
 }
 
-#hakkimizda #serviced-ones {
+#hakkimizda .inner-scroller img {
+	height: 100px;
+}
+
+#hakkimizda .scroller {
+	max-width: 1300px;
+}
+
+#hakkimizda .inner-scroller {
 	display: flex;
-	gap: 1rem;
-	padding: 1rem;
-	background: #c1c1c1;
-	justify-content: space-evenly;
+	gap: 2rem;
+
+	padding-block: 1rem;
+	flex-wrap: wrap;
 }
 
-#hakkimizda #serviced-ones {
-	height: 8rem;
+#hakkimizda .scroller[data-animated="true"] {
+	overflow: hidden;
+	mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+
 }
 
+#hakkimizda .scroller[data-animated="true"] .inner-scroller {
+	width: max-content;
+	flex-wrap: nowrap;
 
+	animation: infinite-scroll 18s linear infinite;
+}
 
-
-
-
-
-
-
-
-
-
+@keyframes infinite-scroll {
+	to {
+		transform: translate(calc(-33% - 1.2rem));
+	}
+}
