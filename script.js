@@ -298,3 +298,39 @@ function addAnimation() {
 		}
 	});
 }
+
+/*
+ * Scirpts for modal
+ */
+// Get all modal buttons
+var modalBtns = document.querySelectorAll('.card-button');
+
+// Loop through each button and add event listener
+modalBtns.forEach(function(btn) {
+	btn.onclick = function() {
+		var modalId = this.getAttribute('data-modal');
+		var modal = document.getElementById(modalId);
+		modal.style.display = "flex"; // Use flex for centering
+	}
+});
+
+// Get all close buttons
+var closeBtns = document.querySelectorAll('.close');
+
+// Loop through each close button and add event listener
+closeBtns.forEach(function(span) {
+	span.onclick = function() {
+		var modal = this.closest('.modal');
+		modal.style.display = "none";
+	}
+});
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+	var modals = document.querySelectorAll('.modal');
+	modals.forEach(function(modal) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	});
+}

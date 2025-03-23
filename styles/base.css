@@ -8,14 +8,16 @@
 	background: var(--highlight-color);
 }
 
-* {
+*,
+*::before,
+*::after {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
 
 html {
-	background: #e3e3e3;
+	background: #ffffff;
 	font-size: 12pt;
 
 	font-family: "Roboto", sans-serif;

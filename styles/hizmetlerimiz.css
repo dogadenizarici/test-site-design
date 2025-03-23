@@ -1,6 +1,5 @@
 #hizmetlerimiz {
-	height: 50rem;
-	background: #ff47c8;
+	background: #d5d5d5;
 }
 
 #hizmetlerimiz .section-header {
@@ -15,3 +14,207 @@
 	height: 4rem;
 	fill: red;
 }
+
+#hizmetlerimiz .services-container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	padding: 0 1rem 1rem 1rem;
+}
+
+#hizmetlerimiz .service {
+	justify-self: stretch;
+	display: flex;
+	border-radius: 1rem;
+
+	background: rgba(22,27,49,1);
+}
+
+#hizmetlerimiz .service-image-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(22, 27, 49, 1);
+	width: 7rem;
+	height: 100%;
+	border-radius: 1rem 0 0 1rem;
+}
+
+#hizmetlerimiz .service-image-wrapper img{
+	width: 5rem;
+	height: 5rem;
+}
+
+#hizmetlerimiz .service-text {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+#hizmetlerimiz .service-text h2{
+	/*background: red;*/
+	background: linear-gradient(60deg, rgba(22,27,49,1) 30%, rgba(255,0,0,0) 85%);
+	width: 100%;
+	color: white;
+	padding: 0.5rem;
+}
+
+#hizmetlerimiz .service-text p{
+	width: 100%;
+	padding: 1rem;
+	height: 100%;
+	border-radius: 1rem 0 1rem 0;
+	background: white;
+}
+
+#hizmetlerimiz .cards-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+gap: 1rem;
+padding: 0 1rem 1rem 1rem;
+}
+
+#hizmetlerimiz .card-button {
+	border: none;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+
+#hizmetlerimiz .modal {
+	display: none;
+	position: fixed;
+	z-index: 20;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+}
+
+#hizmetlerimiz .modal-content {
+	position: relative;
+	background: #fefefe;
+	border-radius: 1rem;
+	margin: auto;
+	padding: 0;
+	width: 80%;
+	max-width: 1200px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	animation: fade-in-zoom 0.4s ease-in-out;
+}
+
+#hizmetlerimiz .close {
+	color: white;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+#hizmetlerimiz .close:hover,
+#hizmetlerimiz .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#hizmetlerimiz .modal-header {
+	padding: 1rem;
+	background: red;
+	color: white;
+	border-radius: 1rem 1rem 0 0;
+}
+
+#hizmetlerimiz .modal-body {
+	padding: 1rem;
+}
+
+#hizmetlerimiz .modal-image-wrapper {
+	border: 2px green solid;
+}
+
+#hizmetlerimiz .modal-image-wrapper div{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 30rem;
+	margin-bottom: 1rem;
+}
+
+#hizmetlerimiz #modal-three-image-one {
+	background-image: url("../images/makine.png");
+}
+
+@keyframes zoom {
+	from {
+		transform:scale(0)
+	}
+	to {
+		transform:scale(1)
+
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-in-zoom {
+	0% {
+		transform:scale(0);
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		transform:scale(1)
+	}
+
+}
+
+@keyframes move {
+	from {
+		left:-100%
+	}
+	to {
+		left:0
+	}
+}
+
+
+@media (max-width: 980px) {
+	#hizmetlerimiz .services-container{
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(4, 1fr);
+	}
+}
+
+@media (max-width: 600px) {
+	#hizmetlerimiz .service-image-wrapper {
+	display: none;
+	}
+
+	#hizmetlerimiz .service-text h2{
+		border-top-left-radius: 1rem;
+	}
+
+	#hizmetlerimiz .service-text p{
+		border-radius: 0 0 1rem 1rem;
+	}
+}
+
+
+
+
